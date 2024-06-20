@@ -21,7 +21,7 @@ class ProductsFixtures extends Fixture
         // Now, create the Product
         $product = new Products();
         $product->setName('Tapis de yoga');
-        $product->setPrice(1500);
+        $product->setPrice(15000);
         $product->setSlug('tapis');
         $product->setIllustration('yoga.jpg');
         $product->setSubtitle('Tapis de yoga');

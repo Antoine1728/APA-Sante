@@ -32,7 +32,7 @@ class ChangePasswordType extends AbstractType
             ->add('new_password',RepeatedType::class,[
                 'type'=>PasswordType::class,
                 'mapped'=>false, 
-                'invalid_message'=>'Le mot de passe et le password ne match pas',
+                'invalid_message'=>'Les mots de passe doivent être identiques',
                 'label'=>'Votre mot de passe',
                 'required'=>true,
                 'first_options'=>[
@@ -49,16 +49,7 @@ class ChangePasswordType extends AbstractType
                 ],
                 
             ])
-            ->add('Firstname',TextType::class,[
-                'disabled'=>true,
-                'label'=>'Prénom'
 
-            ])
-            ->add('Lastname',TextType::class,[
-                'disabled'=>true,
-                'label'=>'Nom'
-
-            ])
             ->add('submit',SubmitType::class,[
                 'label'=>"Mettre à jour"
             ])

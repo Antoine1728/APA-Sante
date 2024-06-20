@@ -10,16 +10,6 @@ class AppFixtures extends Fixture
 {
     public function load(ObjectManager $manager)
     {
-        // Créer un utilisateur exemple
-        $user = new User();
-        $user->setFirstname('Antoine');
-        $user->setLastname('Morau');
-        $user->setEmail('a@gmail.com'); // Dans un vrai projet, veillez à générer un email unique
-        $user->setPassword('azerty'); // Dans un vrai projet, veillez à hasher le mot de passe
-
-        // Persistez l'entité
-        $manager->persist($user);
-
         $faker = Factory::create('fr_FR'); // Créez une instance de Faker
 
         // Créer un utilisateur exemple avec des données aléatoires

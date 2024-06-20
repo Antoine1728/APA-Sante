@@ -32,6 +32,8 @@ class CarriersFixtures extends Fixture
         $carrier3->setDescription('Livraison 1 à 2 jours ouvrés');
         $carrier3->setPrice(10000); // Prix différent pour ce transporteur
 
+        $manager->persist($carrier3);
+        
 
         $manager->flush();
     }

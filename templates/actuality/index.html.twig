@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Actualités
+{% endblock %}
+
+{% block content %}
+	{% if actualities is not empty %}
+		{% for actuality in actualities|sort((a, b) => a.name|lower <=> b.name|lower) %}
+			<div class="row featurette">
+				<div class="col-md-7">
+					<h3 class="featurette-heading" style="margin-top: 30px; margin-bottom: 30px; font-size: 35px;">{{ actuality.name }}</h3>
+					<a href="{{ actuality.url }}" class="lead" target="_blank" style="text-decoration: none">{{ actuality.url }}</a>
+				</div>
+				<div class="col-md-5">
+					{% if actuality.image %}
+						<img src="{{ asset('/uploads/' ~ actuality.image) }}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="300" height="300" alt="Image description">
+					{% else %}
+						<!-- Gardez le SVG comme placeholder si aucune image n'est disponible -->
+						<svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="300" height="300" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500">
+							<title>Placeholder</title>
+							<rect width="100%" height="100%" fill="#eee"/>
+							<text x="50%" y="50%" fill="#aaa" dy=".3em">300x300</text>
+						</svg>
+					{% endif %}
+				</div>
+			</div>
+
+			<hr class="featurette-divider">
+		{% endfor %}
+	{% else %}
+		<p>Aucune actualité disponible.</p>
+	{% endif %}
+{% endblock %}

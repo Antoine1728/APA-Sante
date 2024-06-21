@@ -17,31 +17,27 @@
 				<form role="form" method="post">
 					<div class="form-group">
 						<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" name="email" required>
-					</br><input type="text" class="form-control" id="exampleInputFirstName" placeholder="Nom" name="lastname" required>
-				</br><input type="text" class="form-control" id="exampleInputName" placeholder="Prénom" name="firstname" required>
+						</br><input type="text" class="form-control" id="exampleInputFirstName" placeholder="Nom" name="lastname" required>
+						</br><input type="text" class="form-control" id="exampleInputName" placeholder="Prénom" name="firstname" required>
+					</div>
+					<textarea class="form-control" rows="6" name="commentaires" required></textarea>
+					<button type="submit" class="btn btn-default" name="envoyer" style="border: 1px solid #000; margin-top: 10px;">Envoyer</button>
+				</form>
 			</div>
-			<textarea class="form-control" rows="6" name="commentaires" required></textarea>
-			<button type="submit" class="btn btn-default" name="envoyer" style="border: 1px solid #000; margin-top: 10px;">Envoyer</button>
-		</form>
-
-	</div>
-
 	<div class="col-lg-6">
 		<div class="recent"></div>
-		<div class="" style="margin-top: 20px;">
-			<p>Je suis à votre écoute. Que vous ayez des questions sur mes services, que vous souhaitiez prendre rendez-vous ou 
-										obtenir des informations sur mes séances, je suis là pour vous aider. Votre bien-être est ma priorité, et je tiens 
-										à ce que votre expérience soit la plus agréable et la plus sûre possible.</p>
-			<p>Vous pouvez utiliser le formulaire de contact pour me faire part de vos besoins. Remplissez simplement vos coordonnées et 
-										votre message, et je vous répondrai dans les plus brefs délais.
-										N'hésitez pas à me contacter si vous avez des questions sur vos pathologies, des préoccupations à propos de vos 
-										rendez-vous ou pour toutes autres questions. Votre retour m'aide à mieux vous aider.</p>
-			<p>Merci de me faire confiance pour votre santé. J'ai hâte de vous aider à rester en bonne santé et à vous 
-										sentir bien.</p>
-			<p>Adeline</p>
-
-		</br>
-		<h6>Adresse: 21, rue de la Fontaine Pastour, 17540 Verines</h6>
-	</br>
-	<h6>Telephone: +33 6 22 87 91 79</h6>
-</br><br></div></div></div></div>{% endblock %}
+			<div class="" style="margin-top: 20px;">
+				<p>Je suis à votre écoute. Que vous ayez des questions sur mes services, que vous souhaitiez prendre rendez-vous ou obtenir des informations sur mes séances, je suis là pour vous aider. Votre bien-être est ma priorité, et je tiens à ce que votre expérience soit la plus agréable et la plus sûre possible.</p>
+				<p>Vous pouvez utiliser le formulaire de contact pour me faire part de vos besoins. Remplissez simplement vos coordonnées et votre message, et je vous répondrai dans les plus brefs délais. N'hésitez pas à me contacter si vous avez des questions sur vos pathologies, des préoccupations à propos de vos rendez-vous ou pour toutes autres questions. Votre retour m'aide à mieux vous aider.</p>
+				<p>Merci de me faire confiance pour votre santé. J'ai hâte de vous aider à rester en bonne santé et à vous sentir bien.</p>
+				<p>Adeline</p>
+				</br>
+				<h6>Adresse: 21, rue de la Fontaine Pastour, 17540 Verines</h6>
+				</br>
+				<h6>Telephone: +33 6 22 87 91 79</h6></br>
+				<a href='https://eapspublic.sports.gouv.fr/CartePro/Educateur/08613ED0279/21011993' class="btn btn-info" role="button" target="_blank" style="margin-bottom: 10px;" >Lien vers ma carte professionnelle (Portail public des éducateurs sportifs)</a>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
